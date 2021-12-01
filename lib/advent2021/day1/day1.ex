@@ -26,6 +26,5 @@ defmodule Advent2021.Day1 do
   end
 
   def increases?([prev, next]) when is_number(prev) and is_number(next) and prev < next, do: 1
-  def increases?([_prev, _next]), do: 0
   def increases?(_any), do: 0
 end
