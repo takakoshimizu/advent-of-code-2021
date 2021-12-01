@@ -20,9 +20,7 @@ defmodule Advent2021.Day1 do
     list
       |> Enum.chunk_every(3, 1, :discard)
       |> Enum.map(&Enum.sum/1)
-      |> Enum.chunk_every(2, 1)
-      |> Enum.map(&increases?/1)
-      |> Enum.sum()
+      |> count_increases()
   end
 
   def increases?([prev, next]) when is_number(prev) and is_number(next) and prev < next, do: 1
