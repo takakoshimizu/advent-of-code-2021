@@ -17,7 +17,6 @@ defmodule Advent2021Day2Test do
   describe "parse" do
     test "parses forward" do
       {x, _y} = Day2.parse_direction("forward 5")
-      @input
       assert x == 5
     end
 
